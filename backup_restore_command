@@ -1,0 +1,8 @@
+pg_dump -Fc -U ibs  IBSng > /home/pg.dump       (Backup)
+pg_restore -Fc -j 6 -U ibs -d IBSng /var/pg.dump
+back up az table
+pg_dump -Fc -U ibs  IBSng  -t *y2016_m11* > backuplog.dump
+
+restore kardan 
+pg_restore -Fc -l -U ibs -d IBSng /home/tableconnection_log_y2016_m.dump 
+aeCei5eduG
